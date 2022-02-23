@@ -5472,6 +5472,7 @@ __metadata:
     react-scripts: 5.0.0
     typescript: ^4.5.5
     uuid: ^8.3.2
+    zustand: ^3.7.0
   languageName: unknown
   linkType: soft
 
@@ -12200,5 +12201,17 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: f77b3d8d00310def622123df93d4ee654fc6a0096182af8bd60679ddcdfb3474c56c6c7190817c84a2785648cdee9d721c0154eb45698c62176c322fb46fc700
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "zustand@npm:3.7.0"
+  peerDependencies:
+    react: ">=16.8"
+  peerDependenciesMeta:
+    react:
+      optional: true
+  checksum: 6783ce6572d9dea0fde6390552b6f191416806cde697c544759bf58aad37ac5da94bee7a37b2758eed2f2fcd57e70465c0549f732631923e2df1abbfe452e705
   languageName: node
   linkType: hard

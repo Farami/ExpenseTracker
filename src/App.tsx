@@ -6,10 +6,12 @@ import BudgetCard from "./components/BudgetCard";
 import TotalBudgetCard from "./components/TotalBudgetCard";
 import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 import ViewExpensesModal from "./components/ViewExpensesModal";
-import { UNCATEGORIZED_ID, useBudgets } from "./contexts/BudgetContext";
+import { UNCATEGORIZED_ID, useStore } from "./stores/BudgetStore";
 
 function App() {
-  const { budgets, getBudgetSum } = useBudgets();
+  const budgets = useStore((state) => state.budgets);
+  const getBudgetSum = useStore((state) => state.getBudgetSum);
+
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false);
   const [addExpenseBudgetId, setAddExpenseBudgetId] = useState<string | null>(
     null

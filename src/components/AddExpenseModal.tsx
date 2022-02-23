@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { UNCATEGORIZED_ID, useBudgets } from "../contexts/BudgetContext";
+import { UNCATEGORIZED_ID, useStore } from "../stores/BudgetStore";
 
 type Props = {
   budgetId: string | null;
@@ -12,7 +12,8 @@ export default function AddExpenseModal({ budgetId, handleClose }: Props) {
   const amountRef = React.useRef<HTMLInputElement>(null);
   const budgetIdRef = React.useRef<HTMLSelectElement>(null);
 
-  const { addExpense, budgets } = useBudgets();
+  const addExpense = useStore((store) => store.addExpense);
+  const budgets = useStore((store) => store.budgets);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

@@ -1,5 +1,5 @@
 import { Button, Modal, Stack } from "react-bootstrap";
-import { UNCATEGORIZED_ID, useBudgets } from "../contexts/BudgetContext";
+import { UNCATEGORIZED_ID, useStore } from "../stores/BudgetStore";
 import { currencyFormatter } from "../utils";
 
 type Props = {
@@ -8,8 +8,10 @@ type Props = {
 };
 
 export default function ViewExpensesModal({ budgetId, handleClose }: Props) {
-  const { budgets, getBudgetExpenses, deleteBudget, deleteExpense } =
-    useBudgets();
+  const budgets = useStore((store) => store.budgets);
+  const getBudgetExpenses = useStore((store) => store.getBudgetExpenses);
+  const deleteBudget = useStore((store) => store.deleteBudget);
+  const deleteExpense = useStore((store) => store.deleteExpense);
 
   const expenses = budgetId ? getBudgetExpenses(budgetId) : [];
   const budget =

@@ -1,5 +1,4 @@
-import React from "react";
-import { UNCATEGORIZED_ID, useBudgets } from "../contexts/BudgetContext";
+import { UNCATEGORIZED_ID, useStore } from "../stores/BudgetStore";
 import BudgetCard from "./BudgetCard";
 
 type Props = {
@@ -11,7 +10,7 @@ export default function UncategorizedBudgetCard({
   onViewExpensesClick,
   onAddExpenseClick,
 }: Props) {
-  const { getBudgetSum } = useBudgets();
+  const getBudgetSum = useStore((store) => store.getBudgetSum);
 
   const amount = getBudgetSum(UNCATEGORIZED_ID);
 

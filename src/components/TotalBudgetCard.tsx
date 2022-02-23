@@ -1,9 +1,10 @@
 import React from "react";
-import { useBudgets } from "../contexts/BudgetContext";
+import { useStore } from "../stores/BudgetStore";
 import BudgetCard from "./BudgetCard";
 
 export default function TotalBudgetCard() {
-  const { expenses, budgets } = useBudgets();
+  const expenses = useStore((store) => store.expenses);
+  const budgets = useStore((store) => store.budgets);
 
   const amount = expenses.reduce((total, expense) => total + expense.amount, 0);
   const max = budgets.reduce((total, budget) => total + budget.max, 0);

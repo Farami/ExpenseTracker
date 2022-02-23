@@ -46,7 +46,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:17.0.2"],
             ["react-scripts", "virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:5.0.0"],
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"],
-            ["uuid", "npm:8.3.2"]
+            ["uuid", "npm:8.3.2"],
+            ["zustand", "virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:3.7.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -7870,7 +7871,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:17.0.2"],
             ["react-scripts", "virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:5.0.0"],
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"],
-            ["uuid", "npm:8.3.2"]
+            ["uuid", "npm:8.3.2"],
+            ["zustand", "virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:3.7.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -16374,6 +16376,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yocto-queue-npm-0.1.0-c6c9a7db29-f77b3d8d00.zip/node_modules/yocto-queue/",
           "packageDependencies": [
             ["yocto-queue", "npm:0.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["zustand", [
+        ["npm:3.7.0", {
+          "packageLocation": "./.yarn/cache/zustand-npm-3.7.0-21bbff21dc-6783ce6572.zip/node_modules/zustand/",
+          "packageDependencies": [
+            ["zustand", "npm:3.7.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:3.7.0", {
+          "packageLocation": "./.yarn/__virtual__/zustand-virtual-b24a75042c/0/cache/zustand-npm-3.7.0-21bbff21dc-6783ce6572.zip/node_modules/zustand/",
+          "packageDependencies": [
+            ["zustand", "virtual:e96e21f1c02c3db6a1bb56daeb9a520a604dc9dfb34a645659aca9d73fa56c02fbfddddae1d40b093355240696eef90b18a2215ff8f8c0b09ad8bc67e2255bbb#npm:3.7.0"],
+            ["@types/react", "npm:17.0.38"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
           ],
           "linkType": "HARD",
         }]

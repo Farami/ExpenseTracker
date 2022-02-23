@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { useBudgets } from "../contexts/BudgetContext";
+import { useStore } from "../stores/BudgetStore";
 
 type Props = {
   show: boolean;
@@ -10,7 +10,7 @@ type Props = {
 export default function AddBudgetModal({ show, handleClose }: Props) {
   const nameRef = React.useRef<HTMLInputElement>(null);
   const maxRef = React.useRef<HTMLInputElement>(null);
-  const { addBudget } = useBudgets();
+  const addBudget = useStore((store) => store.addBudget);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
